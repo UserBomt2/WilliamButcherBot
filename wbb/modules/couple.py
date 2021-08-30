@@ -31,7 +31,7 @@ from wbb.core.decorators.errors import capture_err
 from wbb.utils.dbfunctions import get_couple, save_couple
 
 __MODULE__ = "Shippering"
-__HELP__ = "/detect_partnersincrime - To Choose Couple Of The Day"
+__HELP__ = "/detect_partnersincrime - To Choose Partners Of The Day"
 
 
 # Date and time
