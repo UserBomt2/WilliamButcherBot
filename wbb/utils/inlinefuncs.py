@@ -119,7 +119,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[William✨](https://github.com/thehamkercat/WilliamButcherBot):**
+**[Lucifer👿](https://github.com/thehamkercat/WilliamButcherBot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
