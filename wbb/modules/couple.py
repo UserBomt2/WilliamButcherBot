@@ -31,7 +31,7 @@ from wbb.core.decorators.errors import capture_err
 from wbb.utils.dbfunctions import get_couple, save_couple
 
 __MODULE__ = "Shippering"
-__HELP__ = "/detect_gay - To Choose Couple Of The Day"
+__HELP__ = "/detect_partnersincrime - To Choose Couple Of The Day"
 
 
 # Date and time
@@ -57,7 +57,7 @@ today = str(dt()[0])
 tomorrow = str(dt_tom())
 
 
-@app.on_message(filters.command("detect_gay") & ~filters.edited)
+@app.on_message(filters.command("detect_partnersincrime") & ~filters.edited)
 @capture_err
 async def couple(_, message):
     if message.chat.type == "private":
@@ -81,10 +81,10 @@ async def couple(_, message):
             c1_mention = (await app.get_users(c1_id)).mention
             c2_mention = (await app.get_users(c2_id)).mention
 
-            couple_selection_message = f"""**Couple of the day:**
-{c1_mention} + {c2_mention} = ❤️
+            couple_selection_message = f"""**Partners of the day:**
+{c1_mention} + {c2_mention} = will be send to Hell Together 😈
 
-__New couple of the day may be chosen at 12AM {tomorrow}__"""
+__New partners of the day may be chosen at 12AM {tomorrow}__"""
             await app.send_message(
                 message.chat.id, text=couple_selection_message
             )
@@ -96,10 +96,10 @@ __New couple of the day may be chosen at 12AM {tomorrow}__"""
             c2_id = int(is_selected["c2_id"])
             c1_name = (await app.get_users(c1_id)).first_name
             c2_name = (await app.get_users(c2_id)).first_name
-            couple_selection_message = f"""Couple of the day:
-[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❤️
+            couple_selection_message = f"""Partners of the day:
+[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = will be send to Hell Together 😈
 
-__New couple of the day may be chosen at 12AM {tomorrow}__"""
+__New partners of the day may be chosen at 12AM {tomorrow}__"""
             await app.send_message(
                 message.chat.id, text=couple_selection_message
             )
