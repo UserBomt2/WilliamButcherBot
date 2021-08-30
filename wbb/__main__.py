@@ -123,7 +123,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="Support 👨", url="http://t.me/WBBSupport"
+                text="Support 👨", url="https://t.me/mirrorwithlove"
             ),
         ],
         [
@@ -136,9 +136,9 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hey there! My name is {BOT_NAME}. I can manage your "
-    + "group with lots of useful features, feel free to "
-    + "add me to your group."
+    f"Hello Detective♥️ ! Here I'm, {BOT_NAME}. I came from Hell to manage "
+    + "group with exclucive features from Hell, Ask @VikXD before "
+    + "adding me to your group."
 )
 
 
@@ -149,7 +149,7 @@ async def help_command(_, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Help ❓",
+                        text="Help? Go to H*ll",
                         url=f"t.me/{BOT_USERNAME}?start=help",
                     ),
                     InlineKeyboardButton(
@@ -163,13 +163,13 @@ async def help_command(_, message):
                         callback_data="stats_callback",
                     ),
                     InlineKeyboardButton(
-                        text="Support 👨", url="t.me/WBBSupport"
+                        text="Support 👿", url="https://t.me/mirrorwithlove"
                     ),
                 ],
             ]
         )
         return await message.reply(
-            "Pm Me For More Details.", reply_markup=keyboard
+            "Come to Hell For More Details.", reply_markup=keyboard
         )
     await message.reply(
         home_text_pm,
@@ -183,10 +183,10 @@ async def help_parser(name, keyboard=None):
             paginate_modules(0, HELPABLE, "help")
         )
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
+        """Hello {first_name}, I'm {bot_name}, from Hell.
+A group management bot with some useful features.
 You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+Also you can ask anything in Support Group or spam @VikXD umkil.
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -226,10 +226,10 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-Hello {query.from_user.first_name}, My name is {BOT_NAME}.
-I'm a group management bot with some usefule features.
+Hello {query.from_user.first_name}, I'm {BOT_NAME}, from Hell.
+A group management bot with some useful features.
 You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+Also you can ask anything in Support Group or spam @VikXD umkil.
 
 General command are:
  - /start: Start the bot
